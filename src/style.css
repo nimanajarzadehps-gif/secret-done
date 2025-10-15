@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazir', sans-serif;
+  background: #fff;
+  color: #000; 
+}
+
+
+header {
+  background-color: #04ABA2; 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff; 
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.burger.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+  opacity: 0;
+}
+
+.burger.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 150px 50px 50px 50px;
+}
+
+.hero-text {
+  direction: rtl; 
+}
+
+.containernav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  padding: 150px 50px 50px 50px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #04ABA2; 
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #4CAF50; 
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #9B9FE4; 
+  color: #fff;
+}
+
+
+.hero-img img {
+  width: 500px;
+  max-width: 100%;
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column-reverse;
+    width: 100%;
+    background-color: #04ABA2; 
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .containernav {
+flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Vazir", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* بخش ویژگی‌ها */
+.features {
+  padding: 80px 50px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #04ABA2;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature-card {
+  width: 500px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+ 
+    position: relative;
+    left: -18px;
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    justify-content: center;
+
+}
+.features {
+  padding: 100px 50px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.features h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #04ABA2;
+  font-weight: bold;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.feature-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature-card h3 {
+  color: #04ABA2;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.courses-slider {
+  padding: 70px 20px 110px;
+  background: #f8f9fa;
+  font-family: "Vazir", sans-serif;
+}
+
+.courses-slider .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: IranSansBold;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+.course-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(2, 10, 9, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+ 
+}
+
+.course-thumb {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(4,171,162,0.06), rgba(4,171,162,0.02));
+}
+
+.course-thumb img {
+  width:300px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.course-body {
+  padding: 18px 20px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.course-title {
+  color: #0b3b37;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-family: IranSansBold;
+}
+.course-desc {
+  color: #556;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+  font-family: IranSansRegular;
+}
+
+.course-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #04ABA2;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s;
+  font-family: IranSansBold;
+}
+
+.course-btn:hover {
+  background: #038b86;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #04ABA2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #04ABA2;
+  color: #fff;
+}
+
+.swiper-pagination {
+  margin-top: 16px;
+}
+.swiper-pagination-bullet {
+  background: #cfeceb;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  bottom: 10px !important;
+  text-align: center;
+}
+.section-title {
+  color: #04ABA2;
+  font-size: 1.8rem;
+  margin: 0 auto 20px auto; 
+  font-weight: 700;
+  text-align: center;       
+  display: block;           
+}
+.section-title {
+ font-size: 2.2rem;
+  margin-bottom: 
+  -1px;
+  color: #04ABA2;
+  font-weight: bold;
+}
+
+
+
+.swiper-pagination-bullet-active {
+  background: #04ABA2;
+}
+
+
+
+@media (max-width: 1024px) {
+  .course-card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-card{
+    width: 100%;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .course-card {
+    width: 100%;
+    height: auto;
+  }
+  
+
+  .courseInfosn h3 {
+    font-size: 1rem;
+  }
+}
+footer{
+    background-color: #303838;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+   
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: white;
+    opacity: 0,9;
+}
+
+.socialIcons a:hover{
+    background-color: #04ABA2;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #303838;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+.login-signup-btn{
+  background-color: #04ABA2;
+
+}
+
+@font-face  {
+    font-family: IranSansBold;
+    src: url("./font/IRANSansX-BoldD4.ttf") format('truetype');
+    font-style: normal;
+}
+
+@font-face  {
+    font-family: IranSansRegular;
+    font-weight: 400;
+    src: url("./font/IRANSansX-RegularD4.ttf") format('truetype');
+    font-style: normal;}
+Link{
+  text-decoration: none;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
