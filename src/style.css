@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Vazir', sans-serif;
+  
   background: #fff;
   color: #000; 
 }
@@ -186,11 +186,11 @@ flex-direction: column;
 }
 body {
   margin: 0;
-  font-family: "Vazir", sans-serif;
+
   scroll-behavior: smooth;
 }
 
-/* بخش ویژگی‌ها */
+
 .features {
   padding: 80px 50px;
   text-align: center;
@@ -294,7 +294,7 @@ body {
 .courses-slider {
   padding: 70px 20px 110px;
   background: #f8f9fa;
-  font-family: "Vazir", sans-serif;
+  
 }
 
 .courses-slider .container {

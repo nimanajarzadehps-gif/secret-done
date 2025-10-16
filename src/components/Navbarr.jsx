@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [active, setActive] = useState("خانه");
+  const [active, setActive] = useState("خانه"); 
 
   const toggleDrawer = (open) => () => {
     setOpenDrawer(open);
@@ -76,7 +76,7 @@ function Nav() {
                 ورود
               </Link>
             </Typography>
-            <Box sx={{ ml: "4px" }}>
+            <Box sx={{ ml: "4px", mt: "7px" }}> 
               <img src={login} alt="login" />
             </Box>
           </Box>
@@ -148,34 +148,37 @@ function Nav() {
               sx={{
                 fontFamily: "IranSansRegular",
                 fontSize: "1.1rem",
-                color: isActive ? "#fff" : "#303838",
-                backgroundColor: isActive ? "#18D3C9" : "white",
+              
+                color: "#303838", 
+                backgroundColor: "transparent",
                 borderRadius: "8px",
                 position: "relative",
                 transition: "all 0.3s ease",
+              
                 "&::after": {
                   content: '""',
                   position: "absolute",
                   bottom: "4px",
                   left: 0,
-                  width: isActive ? "0" : "0",
+                  width: "0", 
                   height: "2px",
                   backgroundColor: "#18D3C9",
                   transition: "width 0.3s ease",
                 },
                 "&:hover::after": {
-                  width: isActive ? "0" : "100%",
+                  width: "100%", 
                 },
                 "&:hover": {
-                  color: isActive ? "#fff" : "#303838",
-                  backgroundColor: isActive ? "#18D3C9" : "white",
+              
+                  color: "#18D3C9", 
+                  backgroundColor: "transparent", 
                 },
               }}
             >
               <Link
                 to={item.link}
                 style={{
-                  color: "inherit",
+                  color: "inherit", 
                   textDecoration: "none",
                 }}
               >
@@ -190,7 +193,7 @@ function Nav() {
       <Drawer anchor="right" open={openDrawer} onClose={toggleDrawer(false)}>
         <Box
           sx={{
-            bgcolor: "#18D3C9",
+            bgcolor: "#18D3C9", 
             width: "25vh",
             height: "140px",
             mb: "16px",
@@ -214,8 +217,9 @@ function Nav() {
               sx={{
                 fontFamily: "IranSansRegular",
                 fontSize: "1.1rem",
-                color: isActive ? "#fff" : "#303838",
-                backgroundColor: isActive ? "#18D3C9" : "white",
+              
+                color: "#303838", 
+                backgroundColor: "white", 
                 width: "80%",
                 m: "8px auto",
                 borderRadius: "8px",
